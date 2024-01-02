@@ -1,6 +1,6 @@
 ---
 title: Guia de sobrevivência com Terraform
-author: Edson Ferreira
+author: edson
 date: 2022-12-22
 categories: [IaC]
 tags: [terraform, ptbr]
