@@ -89,7 +89,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
+    repo: edsoncelio/edsoncelio.github.io
     repo_id:
     category:
     category_id:
@@ -112,7 +112,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: ""
+baseurl: "https://edsoncelio.dev"
 
 # ------------ The following options are not recommended to be modified ------------------
 
