@@ -3,7 +3,6 @@ title: Guia de sobrevivência com Terraform
 author: edson
 date: 2022-12-22
 categories: [IaC]
-comments: true
 pin: true
 tags: [terraform, ptbr]
 ---
