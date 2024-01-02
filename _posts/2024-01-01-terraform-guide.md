@@ -1,7 +1,7 @@
 ---
 title: Guia de sobrevivência com Terraform
 author: edson
-date: 2024-01-01
+date: 2022-12-22
 categories: [IaC]
 tags: [terraform]
 ---
