@@ -4,7 +4,8 @@ icon: fas fa-info-circle
 order: 3
 ---
 
-> English {: .prompt-info }
+> English
+{: .prompt-info }
 
 Hi, my name is Edson!
 
@@ -20,7 +21,8 @@ Projects I'm currently working on:
 * Grafana Champion Program
 
 
-> English {: .prompt-info }
+> Português
+{: .prompt-info }
 
 Olá, meu nome é Edson!
 
