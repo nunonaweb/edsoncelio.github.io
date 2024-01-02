@@ -15,8 +15,8 @@ As a DevOps Engineer and SRE, I have gained valuable experience in various initi
 In my spare time I speak at some events (such as DevOpsDays and local meetups) and contribute to open source projects.
 
 Projects I'm currently working on:
-* Kubernetes documentation (localization to ptBR): https://kubernetes.io/pt-br/docs/home/
-* CNCF Cloud Native Glossary ( localization to ptBR): https://glossary.cncf.io/pt-br/
+* Kubernetes documentation (localization to ptBR): <https://kubernetes.io/pt-br/docs/home/>
+* CNCF Cloud Native Glossary ( localization to ptBR): <https://glossary.cncf.io/pt-br/>
 * Grafana Champion Program
 
 
@@ -31,6 +31,6 @@ Como Engenheiro DevOps e SRE, ganhei experiência valiosa em diversas iniciativa
 Nas horas vagas sou palestrinha em alguns eventos como DevOpsDays e meetups locais, além de contribuir com alguns projetos open source.
 
 Projetos que contribuo atualmente:
-* Localização das documentações do kubernetes para ptBR: https://kubernetes.io/pt-br/docs/home/
-* Localização do Glossário Cloud Native da CNCF para ptBR: https://glossary.cncf.io/pt-br/
+* Localização das documentações do kubernetes para ptBR: <https://kubernetes.io/pt-br/docs/home/>
+* Localização do Glossário Cloud Native da CNCF para ptBR: <https://glossary.cncf.io/pt-br/>
 * Programa Grafana Champion
