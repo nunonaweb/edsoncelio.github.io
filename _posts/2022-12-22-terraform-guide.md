@@ -8,6 +8,7 @@ tags: [terraform, ptbr]
 ---
 
 > **Aviso**: Tentei adicionar o máximo de referências em português(Brasil), mas infelizmente a maior parte está escrita em inglês.
+{: .prompt-info }
 
 ## Só pra recapitular, o que é o Terraform mesmo?
 
