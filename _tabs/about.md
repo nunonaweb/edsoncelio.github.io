@@ -19,6 +19,8 @@ Projects I'm currently working on:
 * Kubernetes documentation (localization to ptBR): <https://kubernetes.io/pt-br/docs/home/>
 * CNCF Cloud Native Glossary ( localization to ptBR): <https://glossary.cncf.io/pt-br/>
 * Grafana Champion Program
+* AWS Community Builder
+* HashiCorp Ambassador Program
 
 
 > Português
@@ -36,3 +38,5 @@ Projetos que contribuo atualmente:
 * Localização das documentações do kubernetes para ptBR: <https://kubernetes.io/pt-br/docs/home/>
 * Localização do Glossário Cloud Native da CNCF para ptBR: <https://glossary.cncf.io/pt-br/>
 * Programa Grafana Champion
+* AWS Community Builder
+* HashiCorp Ambassador Program
