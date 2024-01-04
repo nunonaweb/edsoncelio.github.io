@@ -38,5 +38,5 @@ Projetos que contribuo atualmente:
 * Localização das documentações do kubernetes para ptBR: <https://kubernetes.io/pt-br/docs/home/>
 * Localização do Glossário Cloud Native da CNCF para ptBR: <https://glossary.cncf.io/pt-br/>
 * Programa Grafana Champion
-* AWS Community Builder
-* HashiCorp Ambassador Program
+* Programa AWS Community Builder
+* Programa HashiCorp Ambassador
