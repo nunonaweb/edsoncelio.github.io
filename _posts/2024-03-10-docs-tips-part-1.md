@@ -85,3 +85,37 @@ Algumas recomendações:
 ### Introduza listas e tabelas
 É recomendado introduzir as listas com tabelas com uma sentença que explique para os leitores o que a lista ou a tabela apresenta. Termine a sentença introdutória com dois pontos ao invés de ponto final.
 
+## Parágrafos
+TODO
+
+## Público alvo
+Talvez um dos pontos de mais importância nessas dicas, o curso inicia essa seção com uma equação que resume bem:
+
+boa documentação = conhecimento e habilidades que o seu público alvo precisa pra fazer uma tarefa - conhecimento e habilidade atuais do seu público alvo
+
+De forma resumida: garanta que sua a documentação forneça a informação que o seu público alvo precisa mas não tem.
+
+### Defina seu público alvo
+Definir o público alvo gasta um tempo considerável da definição de uma documentação, podendo envolver pesquisas, estudo de experiência do usuário e testes de documentação. Como provavelmente você não vai ter muito tempo pra fazer isso, o curso usa uma abordagem mais simples.
+
+### Determine o que o seu público alvo precisa aprender
+Comece por identificar a função do seu público alvo. Algumas funções exemplo:
+* Engenheiros de software
+* Funções técnicas mas que não são engenheiros (como gerente de projeto)
+* Cientistas
+* Posições não técnicas
+
+
+### Adapte a documentação para seu público alvo
+TODO
+
+#### Vocabulário e conceitos
+TODO
+
+#### Curse of knowledge (em bom português, maldição do conhecimento)
+TODO
+
+
+### Neutralidade cultural
+TODO
+
