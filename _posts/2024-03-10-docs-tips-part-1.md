@@ -1,7 +1,7 @@
 ---
 title: Dicas de Escrita Técnica - parte 01
 author: edson
-date: 2023-11-20
+date: 2024-02-12
 categories: [Documentation]
 tags: [documentation, ptbr]
 ---
