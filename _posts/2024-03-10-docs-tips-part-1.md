@@ -9,7 +9,7 @@ tags: [documentation, ptbr]
 Normalmente quando me perguntam sobre documentação indico [esse curso](https://developers.google.com/tech-writing/overview) introdutório de escrita técnica da Google.
 Baseado nisso, vou compilar alguns dos pontos que considero importantes.
 
-> Como o curso é em inglês (e focado no inglês) tomei a liberdade de fazer uma tradução livre :)
+> Como o curso é em inglês (e focado no inglês) tomei a liberdade de fazer uma tradução livre e adaptar alguns exemplos :) 
 {: .prompt-info }
 
 ## Palavras
@@ -17,7 +17,7 @@ Dicas relacionadas a palavras (que vou chamar de termos também) na documentaç�
 
 ### Defina termos novos (ou que não são familiares pra audiência)
 Sempre que tiver escrevendo uma documentação, fique atento a termos que podem não ser familiar (ou novos) pra sua audiência. Para esses casos, pode usar duas abordagens:
-* Se o termo já existe, aponte para um link de uma boa explicação (não precisa reinventar a roda)
+* Se o termo já existe, aponte para um link de uma boa explicação (não precisa reinventar a roda)   
 * Se o documento em questão tá introduzindo o termo, defina o termo. Se perceber que está definindo termos demais, separe todas as definições em um glossário
 
 ### Use termos de forma consistente
@@ -98,24 +98,52 @@ De forma resumida: garanta que sua a documentação forneça a informação que 
 ### Defina seu público alvo
 Definir o público alvo gasta um tempo considerável da definição de uma documentação, podendo envolver pesquisas, estudo de experiência do usuário e testes de documentação. Como provavelmente você não vai ter muito tempo pra fazer isso, o curso usa uma abordagem mais simples.
 
-### Determine o que o seu público alvo precisa aprender
-Comece por identificar a função do seu público alvo. Algumas funções exemplo:
+Comece por identificar o papel do seu público alvo na organização, alguns exemplos:
 * Engenheiros de software
 * Funções técnicas mas que não são engenheiros (como gerente de projeto)
 * Cientistas
 * Posições não técnicas
 
+Os papéis por si só são insufientes pra definir seu público alvo (infelizmente nem todo mundo que exerce um mesmo papel tem o mesmo conhecimento). 
+Ou seja, você também deve levar em conta a proximidade do público alvo com o conhecimento.
+
+Abaixo um exemplo de uma análise fictícia para o público alvo de um projeto de uma plataforma de observabilidade.
+O público alvo se enquadra nas seguintes funções:
+* Site Reliability Engineers
+* DevOps Engineers
+
+O público alvo tem a seguinte proximidade com o conhecimento:
+*  O público alvo já conhece sobre a stack da Grafana que é similar a plataforma que vai ser desenvolvida.
+*  O público alvo já tem conhecimento de lógica de programação e scripting com Python, mas o projeto vai usar Golang então alguns membros do time vão precisar de um reforço em desenvolvimento.
+
+### Determine o que o seu público alvo precisa aprender
+Escreva uma lista de tudo que seu público algo precisa aprender para atingir seus objetivos. 
+Em alguns casos, a lista deve conter tarefas que o público alvo precisa realizar. Por exemplo:
+
+Após ler a documentação, o público alvo vai saber fazer as seguintes tarefas:
+
+* Configurar um *datasource* no Grafana
+* Criar uma dashboard no Grafana
+* Exportar o *.json* de uma dashboard no Grafana
+
+Repare que em alguns casos o público alvo precisa aprender a realizar tarefas em alguma ordem. Por exemplo, o público alvo precisa aprender sobre *datasources* no Grafana antes de criar e configurar dashboards.
+
 
 ### Adapte a documentação para seu público alvo
-TODO
+Escrever para atender as necessidades do seu público alvo requer empatia. Lembre-se que você deve criar explicações que satisfaçam a curiosidade (ou necessidade) do público alvo, não a sua. Abaixo alguns aspectos para se atentar ao adequar a documentação para seu público alvo.
 
 #### Vocabulário e conceitos
-TODO
+
+Adapte o vocabulário para seu público alvo.
+Esteja atento à proximidade. As pessoas da sua equipe provavelmente entendem as abreviações da sua equipe, mas será que as pessoas das outras equipes entendem essas mesmas abreviações? À medida que seu público alvo aumenta, presuma que você deve explicar mais.
 
 #### Curse of knowledge (em bom português, maldição do conhecimento)
-TODO
-
+Os especialistas muitas vezes sofrem com a maldição do conhecimento, o que significa que a sua compreensão especializada de um tópico arruína as suas explicações aos recém-chegados. Como especialistas, é fácil esquecer que os novatos não sabem o que vocês já sabem. 
 
 ### Neutralidade cultural
-TODO
+Mantenha sua escrita culturalmente neutra, sem o uso de expressões idiomáticas. Não exiga que os leitores entendam como funciona o Campeonato Brasileiro de Futebol pra entender como funciona um software.
+
+As expressões idiomáticas estão tão profundamente arraigadas em nossa fala que o significado especial não literal das expressões idiomáticas se torna invisível para nós. Ou seja, as expressões idiomáticas são outra forma da maldição do conhecimento.
+
+Observe também que algumas pessoas do seu público usam software de tradução para ler sua documentação. Softwares de tradução tendem a ter dificuldade em traduzir expressões idiomáticas. 
 
