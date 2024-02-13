@@ -6,7 +6,7 @@ categories: [Documentation]
 tags: [documentation, ptbr]
 ---
 
-Normalmente quando me perguntam sobre documentação indico [esse curso](https://developers.google.com/tech-writing/overview) introdutório de escrita técnica da Google.
+Normalmente quando me perguntam sobre como escrever documentações melhores indico [esse curso](https://developers.google.com/tech-writing/overview) introdutório de escrita técnica da Google.
 Baseado nisso, vou compilar alguns dos pontos que considero importantes.
 
 > Como o curso é em inglês (e focado no inglês) tomei a liberdade de fazer uma tradução livre e adaptar alguns exemplos :) 
@@ -30,7 +30,6 @@ No primeiro uso de um acrônimo desconhecido em um documento ou seção, soletra
 "A **Cloud Native Computing Foundation** (**CNCF**) hospeda componentes críticos da infraestrutura tecnológica global."
 
 Dai em diante você pode usar apenas o acrônimo sem problemas.
-
 
 ## Sentenças curtas
 Na escrita de código, normalmente tentamos diminuir a quantidade de linha pelos seguintes motivos:
@@ -78,7 +77,7 @@ Se a lista é uma sentença use a pontuação adequada no final, por exemplo:
 Tabelas são bem úteis, de uma página contendo muitos parágrafos e uma tabela, normalmente os olhos se voltam para a tabela.
 
 Algumas recomendações:
-* Nomeie as colunas com um nome significado. Não faça os leitores adivinharem o que cada coluna contém.
+* Nomeie as colunas com um nome que tenha significado. Não faça os leitores adivinharem o que cada coluna contém.
 * Evite colocar muito texto em uma célula da tabela. Se uma célula da tabela contiver mais de duas sentenças, se pergunte se essa informação não pertence a outro formato.
 * Embora as colunas possam conter diferentes tipos de dados, busque o paralelismo dentro de colunas individuais. Por exemplo, as células dentro de uma coluna específica da tabela não devem ser uma mistura de dados numéricos e artistas de circo famosos.
 
@@ -94,11 +93,10 @@ Bons parágrafos respondem as três questões abaixo:
 2. Por que é importante para o leitor saber disso?
 3. Como o leitor deve usar esse conhecimento?
 
-
 ## Público alvo
 Talvez um dos pontos de mais importância nessas dicas, o curso inicia essa seção com uma equação que resume bem:
 
-boa documentação = conhecimento e habilidades que o seu público alvo precisa pra fazer uma tarefa - conhecimento e habilidade atuais do seu público alvo
+> boa documentação = conhecimento e habilidades que o seu público alvo precisa pra fazer uma tarefa - conhecimento e habilidade atuais do seu público alvo
 
 De forma resumida: garanta que sua a documentação forneça a informação que o seu público alvo precisa mas não tem.
 
@@ -124,7 +122,7 @@ O público alvo tem a seguinte proximidade com o conhecimento:
 *  O público alvo já tem conhecimento de lógica de programação e scripting com Python, mas o projeto vai usar Golang então alguns membros do time vão precisar de um reforço em desenvolvimento.
 
 ### Determine o que o seu público alvo precisa aprender
-Escreva uma lista de tudo que seu público algo precisa aprender para atingir seus objetivos. 
+Escreva uma lista de tudo que seu público alvo precisa aprender para atingir seus objetivos. 
 Em alguns casos, a lista deve conter tarefas que o público alvo precisa realizar. Por exemplo:
 
 Após ler a documentação, o público alvo vai saber fazer as seguintes tarefas:
@@ -135,19 +133,17 @@ Após ler a documentação, o público alvo vai saber fazer as seguintes tarefas
 
 Repare que em alguns casos o público alvo precisa aprender a realizar tarefas em alguma ordem. Por exemplo, o público alvo precisa aprender sobre *datasources* no Grafana antes de criar e configurar dashboards.
 
-
 ### Adapte a documentação para seu público alvo
 Escrever para atender as necessidades do seu público alvo requer empatia. Lembre-se que você deve criar explicações que satisfaçam a curiosidade (ou necessidade) do público alvo, não a sua. Abaixo alguns aspectos para se atentar ao adequar a documentação para seu público alvo.
 
 #### Vocabulário e conceitos
-
 Adapte o vocabulário para seu público alvo.
 Esteja atento à proximidade. As pessoas da sua equipe provavelmente entendem as abreviações da sua equipe, mas será que as pessoas das outras equipes entendem essas mesmas abreviações? À medida que seu público alvo aumenta, presuma que você deve explicar mais.
 
 #### Curse of knowledge (em bom português, maldição do conhecimento)
 Os especialistas muitas vezes sofrem com a maldição do conhecimento, o que significa que a sua compreensão especializada de um tópico arruína as suas explicações aos recém-chegados. Como especialistas, é fácil esquecer que os novatos não sabem o que vocês já sabem. 
 
-Para ler mais sobre *curse of knowledge*: https://en.wikipedia.org/wiki/Curse_of_knowledge
+Para ler mais sobre *curse of knowledge*: [https://en.wikipedia.org/wiki/Curse_of_knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge)
 
 ### Neutralidade cultural
 Mantenha sua escrita culturalmente neutra, sem o uso de expressões idiomáticas. Não exiga que os leitores entendam como funciona o Campeonato Brasileiro de Futebol pra entender como funciona um software.
@@ -155,4 +151,41 @@ Mantenha sua escrita culturalmente neutra, sem o uso de expressões idiomáticas
 As expressões idiomáticas estão tão profundamente arraigadas em nossa fala que o significado especial não literal das expressões idiomáticas se torna invisível para nós. Ou seja, as expressões idiomáticas são outra forma da maldição do conhecimento.
 
 Observe também que algumas pessoas do seu público usam software de tradução para ler sua documentação. Softwares de tradução tendem a ter dificuldade em traduzir expressões idiomáticas. 
+
+## Documentos
+Dicas relacionadas a como transformar as frases e parágrafos em um documento que faça sentido pro leitor.
+
+### Indique o escopo do seu documento
+Um bom documento começa definindo bem seu escopo. Por exemplo:
+> Esse documento descreve a arquitetura de CI/CD das aplicações de produção.
+
+É melhor ainda quando além disso o seu documento define o que não faz parte do escopo, e que talvez o público alvo poderia esperar que cobrisse. Por exemplo:
+
+> Esse documento não descreve a configuração da ferramenta usada para CI/CD das aplicações de produção.
+
+Definir o que está e o que não está no escopo, não ajuda só ao leitor mas também a quem está escrevendo. Quando estiver escrevendo sempre foque no que foi definido no escopo pra garantir que está satisfazendo o que foi proposto.
+
+### Indique o público alvo
+Um bom documento especifica explicitamente o seu público. Por exemplo:
+
+Este documento é destinado aos seguintes públicos:
+* Engenheiros de software
+* Gerentes de projeto
+
+Além de especificar o público, você pode especificar também qualquer conhecimento ou experiência que é pré-requisito. Por exemplo:
+
+> Esse documento assume que você tem conhecimento em Github Actions.
+
+### Faça um resumo dos pontos principais no início
+
+As pessoas não precisam (ou querem) ler uma documentação de 10 páginas sobre um projeto pra entender como funciona. Imagine um cenário em que as pessoas vão ler apenas o primeiro parágrafo, então garanta que o início do documento responde todas as perguntas essenciais.
+
+####  Faça comparações e contrastes
+Fazer comparações das suas ideias com conceitos que seu público já conhece pode ajudar bastante no entendimento. Por exemplo:
+> O Terraform resolve o mesmo problema que o CloudFormation, mas de uma forma mais completa e fácil de usar.
+
+---
+
+Isso é tudo por agora, e como citei no começo, isso é apenas um resumo com os pontos que considero essenciais do curso, você ainda pode fazer o curso (que é gratuito!).   
+Em breve devo publicar a parte 02 (que é relacionada ao segundo curso).
 
