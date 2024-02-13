@@ -17,8 +17,8 @@ Dicas relacionadas a palavras (que vou chamar de termos também) na documentaç�
 
 ### Defina termos novos (ou que não são familiares pra audiência)
 Sempre que tiver escrevendo uma documentação, fique atento a termos que podem não ser familiar (ou novos) pra sua audiência. Para esses casos, pode usar duas abordagens:
-* Se o termo já existe, aponte para um link de uma boa explicação (não precisa reinventar a roda)   
-* Se o documento em questão tá introduzindo o termo, defina o termo. Se perceber que está definindo termos demais, separe todas as definições em um glossário
+* Se o termo já existe, aponte para um link de uma boa explicação (não precisa reinventar a roda).
+* Se o documento em questão tá introduzindo o termo, defina o termo. Se perceber que está definindo termos demais, separe todas as definições em um glossário.
 
 ### Use termos de forma consistente
 Se você alterar o nome de uma variável no meio de um método, seu código não vai compilar. Da mesma forma, se você renomear um termo no meio de um documento, suas ideias não serão compiladas (na cabeça dos usuários).
@@ -184,7 +184,9 @@ As pessoas não precisam (ou querem) ler uma documentação de 10 páginas sobre
 Fazer comparações das suas ideias com conceitos que seu público já conhece pode ajudar bastante no entendimento. Por exemplo:
 > O Terraform resolve o mesmo problema que o CloudFormation, mas de uma forma mais completa e fácil de usar.
 
----
+## Conclusão
+E a dica mais valiosa de todas: se você está em um contexto onde as documentações são as pessoas, seja a primeira pessoa a puxar o bonde pra mudar isso!   
+Não precisa ser a melhor documentação do mundo, precisa ser o pontapé inicial.
 
 Isso é tudo por agora, e como citei no começo, isso é apenas um resumo com os pontos que considero essenciais do curso, você ainda pode fazer o curso (que é gratuito!).   
 Em breve devo publicar a parte 02 (que é relacionada ao segundo curso).
