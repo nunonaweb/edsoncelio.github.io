@@ -86,7 +86,14 @@ Algumas recomendações:
 É recomendado introduzir as listas com tabelas com uma sentença que explique para os leitores o que a lista ou a tabela apresenta. Termine a sentença introdutória com dois pontos ao invés de ponto final.
 
 ## Parágrafos
-TODO
+De todas as dicas relacionadas a escrita de um bom parágrafo (parágrafos curtos, único tópico por paragráfo e por ai vai) vou deixar a que considerei a mais importante.
+
+### Responda o quê, por que e como
+Bons parágrafos respondem as três questões abaixo:
+1. O quê você está tentando dizer para seus leitores?
+2. Por que é importante para o leitor saber disso?
+3. Como o leitor deve usar esse conhecimento?
+
 
 ## Público alvo
 Talvez um dos pontos de mais importância nessas dicas, o curso inicia essa seção com uma equação que resume bem:
@@ -139,6 +146,8 @@ Esteja atento à proximidade. As pessoas da sua equipe provavelmente entendem as
 
 #### Curse of knowledge (em bom português, maldição do conhecimento)
 Os especialistas muitas vezes sofrem com a maldição do conhecimento, o que significa que a sua compreensão especializada de um tópico arruína as suas explicações aos recém-chegados. Como especialistas, é fácil esquecer que os novatos não sabem o que vocês já sabem. 
+
+Para ler mais sobre *curse of knowledge*: https://en.wikipedia.org/wiki/Curse_of_knowledge
 
 ### Neutralidade cultural
 Mantenha sua escrita culturalmente neutra, sem o uso de expressões idiomáticas. Não exiga que os leitores entendam como funciona o Campeonato Brasileiro de Futebol pra entender como funciona um software.
