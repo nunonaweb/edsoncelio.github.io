@@ -15,8 +15,8 @@ Baseado nisso, vou compilar alguns dos pontos que considero importantes.
 ## Palavras
 Dicas relacionadas a palavras (que vou chamar de termos também) na documentação.
 
-### Defina termos novos (ou que não são familiares pra audiência)
-Sempre que tiver escrevendo uma documentação, fique atento a termos que podem não ser familiar (ou novos) pra sua audiência. Para esses casos, pode usar duas abordagens:
+### Defina termos novos (ou que não são familiares pro público alvo)
+Sempre que tiver escrevendo uma documentação, fique atento a termos que podem não ser familiar (ou novos) pra seu público alvo. Para esses casos, pode usar duas abordagens:
 * Se o termo já existe, aponte para um link de uma boa explicação (não precisa reinventar a roda).
 * Se o documento em questão tá introduzindo o termo, defina o termo. Se perceber que está definindo termos demais, separe todas as definições em um glossário.
 
@@ -146,7 +146,7 @@ Os especialistas muitas vezes sofrem com a maldição do conhecimento, o que sig
 Para ler mais sobre *curse of knowledge*: [https://en.wikipedia.org/wiki/Curse_of_knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge)
 
 ### Neutralidade cultural
-Mantenha sua escrita culturalmente neutra, sem o uso de expressões idiomáticas. Não exiga que os leitores entendam como funciona o Campeonato Brasileiro de Futebol pra entender como funciona um software.
+Mantenha sua escrita culturalmente neutra, sem o uso de expressões idiomáticas. Não exija que os leitores entendam como funciona o Campeonato Brasileiro de Futebol pra entender como funciona um software.
 
 As expressões idiomáticas estão tão profundamente arraigadas em nossa fala que o significado especial não literal das expressões idiomáticas se torna invisível para nós. Ou seja, as expressões idiomáticas são outra forma da maldição do conhecimento.
 
