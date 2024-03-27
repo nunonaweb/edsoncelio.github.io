@@ -44,14 +44,65 @@ Para ver todos os recursos você pode consultar as docs do provider [aqui](https
 Essa é uma das opções mais interessantes pra quem quer manter a gestão dos recursos via manifestos do Kubernetes (o nosso querido yaml).   
 Com o Operator do Grafana você vai conseguir fazer deploy e gerenciar instâncias do Grafana de dentro de um cluster Kubernetes e também gerenciar instâncias externas (como o Grafana Cloud).
 
+
+### Autenticação
+A autenticação pode ser feita tanto via Secrets quanto via config do CRD.   
+Autenticação via Secret:
+
+```yaml
+---
+kind: Secret
+apiVersion: v1
+metadata:
+  name: credentials
+  namespace: grafana
+stringData:
+  GF_SECURITY_ADMIN_PASSWORD: secret
+  GF_SECURITY_ADMIN_USER: root
+type: Opaque
+```
+
+Autenticação via config:
+```yaml
+---
+apiVersion: grafana.integreatly.org/v1beta1
+kind: Grafana
+metadata:
+  name: grafana
+  labels:
+    dashboards: "grafana"
+spec:
+  config:
+    log:
+      mode: "console"
+    auth:
+      disable_login_form: "false"
+    security:
+      admin_user: root
+      admin_password: secret
+```
+Mais detalhes você pode ver [aqui](https://grafana.github.io/grafana-operator/docs/examples/credential_secret/readme/) e [aqui](https://grafana.github.io/grafana-operator/docs/examples/credential_config/readme/).
+
+
+### Recursos que podem ser gerenciados
+
+Os recursos que podem ser gerenciados pelo Operator:
+* instâncias do Grafana
+* Datasources
+* Alerts
+* Dashboards
+* Folders
+
+
+Um ponto interessante aqui é relacionado as dashboards, que podem ser gerenciadas não só em json, mas também nas formas abaixo:
+* json
+* gzipJson
+* URL
+* Jsonnet
+
 ## Grizzly
 
 TODO
-
-
-
-
-
 
 
 
