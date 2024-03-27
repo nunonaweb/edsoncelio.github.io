@@ -1,7 +1,7 @@
 ---
-title: Grafana as a Code 101 
+title: Alternativas para Gerenciar Recursos do Grafana como Código
 author: edson
-date: 2024-03-18
+date: 2024-03-27
 categories: [Iac, Observability]
 tags: [grafana, iac, ptbr]
 ---
