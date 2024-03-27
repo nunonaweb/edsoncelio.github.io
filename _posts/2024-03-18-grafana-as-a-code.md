@@ -7,7 +7,7 @@ tags: [grafana, iac, ptbr]
 ---
 
 Nesse post vou falar um pouco sobre as alternativas para quem quer gerenciar todos (ou quase todos) os recursos de uma instância do Grafana usando código.   
-A ideia aqui é mostrar as opções que considero as melhores atualmente, espero que sirva pra ajudar a escolher uma delas no seu cenário de trabalho.
+A ideia aqui é mostrar as opções que considero as mais interessantes atualmente, espero que sirva pra ajudar a escolher uma delas no seu cenário de trabalho.
 
 ## Grafana Provider (Terraform)
 
@@ -102,8 +102,36 @@ Um ponto interessante aqui é relacionado as dashboards, que podem ser gerenciad
 
 ## Grizzly
 
-TODO
+Grizzly é uma CLI que permite que você gerencie alguns recursos do Grafana usando yaml ou Json (com Jsonnet).
 
+### Autenticação
+
+Para autenticar em uma instância do Grafana:
+```bash
+grr config set grafana.url http://localhost:3000 
+grr config set grafana.user admin # Opcional: Usuário se tiver usando autenticação básica
+grr config set grafana.token abcd12345 # Token da service account (ou senha se usar autenticação básica)
+```
+
+O Grizzly também gerencia recursos do Grafana Cloud Prometheus (Mimir) e do Synthetic Monitoring, sendo que cada um tem sua forma de autenticação.     
+Mais detalhes [aqui](https://grafana.github.io/grizzly/configuration/).
+
+
+### Recursos que podem ser gerenciados
+
+O Grizzly gerencia os seguintes recursos de instâncias Grafana:
+* Dashboards
+* Folders
+* Datasources
+* Panels e Variables
+* Contact Points (alertas)
+* Notification Policy (alertas)
+
+Já relacionado ao Mimir, os seguintes recursos podem ser relacionados:
+* Prometheus Alerts
+* Prometheus Recording Groups
+
+E por último, também gerencia checks de Synthetic Monitoring.
 
 
 ## Pontos de atenção
@@ -114,7 +142,7 @@ E sendo sincero, não é nada agradável criar e alterar dashboards do Grafana d
 
 ---
 
-Aqui eu trouxe apenas as opções que considero as melhores, mas se quiser ver uma lista completa pode dar uma olhada nesse blog post da Grafana que tem várias opções e faz comparações entre elas: [https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/](https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/).
+Aqui eu trouxe apenas as opções que considero as mais interessantes, mas se quiser ver uma lista completa pode dar uma olhada nesse blog post da Grafana que tem várias opções e faz comparações entre elas: [https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/](https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/).
 
 
 
