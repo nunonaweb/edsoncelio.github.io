@@ -188,7 +188,7 @@ E sendo sincero, não é nada agradável criar e alterar dashboards do Grafana d
 ---
 ---
 
-Uma lista completa de ferramentas pode ser vista nesse blog post da Grafana, inclusive com comparação entre elas: [https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/](https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/).
+Uma lista completa de ferramentas (incluindo collection do Ansible e provider do Crossplane) pode ser vista nesse blog post da Grafana, inclusive com comparação entre elas: [https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/](https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/).
 
 
 
