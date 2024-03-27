@@ -11,7 +11,10 @@ A ideia aqui é mostrar as opções que considero as mais interessantes atualmen
 
 ## Grafana Provider (Terraform)
 
-A primeira opção é o provider do Terraform para o Grafana. O provider tem suporte tanto para Grafana OSS quanto para Grafana Cloud.
+A primeira opção é o provider do Terraform para o Grafana, que talvez seja a opção mais conhecida.   
+O provider tem suporte tanto para Grafana OSS quanto para Grafana Cloud.
+
+Link para acesso a documentação: https://registry.terraform.io/providers/grafana/grafana/latest/docs
 
 ### Autenticação
 
@@ -41,9 +44,18 @@ Para ver todos os recursos você pode consultar as docs do provider [aqui](https
 
 
 ## Grafana Operator (Kubernetes)
+
 Essa é uma das opções mais interessantes pra quem quer manter a gestão dos recursos via manifestos do Kubernetes (o nosso querido yaml).   
 Com o Operator do Grafana você vai conseguir fazer deploy e gerenciar instâncias do Grafana de dentro de um cluster Kubernetes e também gerenciar instâncias externas (como o Grafana Cloud).
 
+A instalação do Operator tanto via Helm quanto via Kustomize.   
+
+Instalação via Helm:
+```bash
+helm upgrade -i grafana-operator oci://ghcr.io/grafana/helm-charts/grafana-operator --version v5.7.0
+```
+
+Link para acesso a documentação: https://grafana.github.io/grafana-operator/docs/quick-start/
 
 ### Autenticação
 A autenticação pode ser feita tanto via Secrets quanto via config do CRD.   
@@ -104,6 +116,22 @@ Um ponto interessante aqui é relacionado as dashboards, que podem ser gerenciad
 
 Grizzly é uma CLI que permite que você gerencie alguns recursos do Grafana usando yaml ou Json (com Jsonnet).
 
+Como é uma CLI escrita em Golang, o Grizzly é apenas um binário, então a instalação é simplificada:
+
+```bash
+# download the binary (adapt os and arch as needed)
+$ curl -fSL -o "/usr/local/bin/grr" "https://github.com/grafana/grizzly/releases/download/v0.4.0/grr-linux-amd64"
+
+# make it executable
+$ chmod a+x "/usr/local/bin/grr"
+
+# have fun :)
+$ grr --help
+```
+O download das versões é feito diretamente da página de releases [aqui](https://github.com/grafana/grizzly/releases).
+
+Link para acesso a documentação: https://grafana.github.io/grizzly/
+
 ### Autenticação
 
 Para autenticar em uma instância do Grafana:
@@ -133,16 +161,34 @@ Já relacionado ao Mimir, os seguintes recursos podem ser relacionados:
 
 E por último, também gerencia checks de Synthetic Monitoring.
 
+Comparado as outras opções aqui é possível definir dashboards como yaml, como por exemplo:
+```yaml
+apiVersion: grizzly.grafana.com/v1alpha1
+kind: Dashboard
+metadata:
+    name: prod-overview
+    folder: general
+spec:
+    schemaVersion: 17
+    tags:
+        - templated
+    timezone: browser
+    title: Production Overview
+    uid: prod-overview
+```
+
 
 ## Pontos de atenção
 
 Manter dashboards como código pode ser um desafio, principalmente quando a ferramenta que você está usando simplesmente recebe um arquivo .json da dashboard como entrada.    
-E sendo sincero, não é nada agradável criar e alterar dashboards do Grafana diretamente via .json, dependendo da complexidade da dashboard pode se tornar um trabalho bem cansativo.
+
+E sendo sincero, não é nada agradável criar e alterar dashboards do Grafana diretamente via .json, dependendo da complexidade da dashboard pode se tornar um trabalho bem cansativo então é importante sempre colocar na balança se vale a pena ou não manter 100% do fluxo via código.
 
 
 ---
+---
 
-Aqui eu trouxe apenas as opções que considero as mais interessantes, mas se quiser ver uma lista completa pode dar uma olhada nesse blog post da Grafana que tem várias opções e faz comparações entre elas: [https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/](https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/).
+Uma lista completa de ferramentas pode ser vista nesse blog post da Grafana, inclusive com comparação entre elas: [https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/](https://grafana.com/blog/2022/12/06/a-complete-guide-to-managing-grafana-as-code-tools-tips-and-tricks/).
 
 
 
