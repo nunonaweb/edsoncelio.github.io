@@ -20,7 +20,6 @@ Projects I'm currently working on:
 * CNCF Cloud Native Glossary ( localization to ptBR): <https://glossary.cncf.io/pt-br/>
 * Grafana Champion Program
 * AWS Community Builder
-* HashiCorp Ambassador Program
 
 
 > Português
@@ -39,4 +38,3 @@ Projetos que contribuo atualmente:
 * Localização do Glossário Cloud Native da CNCF para ptBR: <https://glossary.cncf.io/pt-br/>
 * Programa Grafana Champion
 * Programa AWS Community Builder
-* Programa HashiCorp Ambassador
