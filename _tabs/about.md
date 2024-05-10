@@ -22,6 +22,8 @@ Projects I'm currently working on:
 * AWS Community Builder
 * CNCF Ambassador
 
+You can check some of my public talks [here!](https://edsoncelio.dev/public-talks/)
+
 
 > Português
 {: .prompt-info }
@@ -40,3 +42,6 @@ Projetos que contribuo atualmente:
 * Programa Grafana Champion
 * Programa AWS Community Builder
 * Programa de pessoas embaixadoras da CNCF
+
+Você pode conferir algumas das minhas palestras públicas [aqui!](https://edsoncelio.dev/public-talks/)
+
