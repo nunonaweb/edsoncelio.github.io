@@ -9,17 +9,18 @@ order: 3
 
 Hi, my name is Edson!
 
-I have been working in IT since 2012, including technical support, software development, and, most recently, as a Site Reliability Engineer.
+I have worked in IT since 2012, including technical support, software development, and, most recently, as a Site Reliability Engineer.
 
 As a DevOps Engineer and SRE, I have gained valuable experience in various initiatives such as migration to AWS services (including ECS and EKS), optimizing cloud service costs, and managing infrastructure using Infrastructure as Code (IaC) with Terraform.
 
-In my spare time I speak at some events (such as DevOpsDays and local meetups) and contribute to open source projects.
+I speak at events (such as DevOpsDays and local meetups) and contribute to open-source projects in my spare time.
 
 Projects I'm currently working on:
 * Kubernetes documentation (localization to ptBR): <https://kubernetes.io/pt-br/docs/home/>
 * CNCF Cloud Native Glossary ( localization to ptBR): <https://glossary.cncf.io/pt-br/>
 * Grafana Champion Program
 * AWS Community Builder
+* CNCF Ambassador
 
 
 > Português
@@ -38,3 +39,4 @@ Projetos que contribuo atualmente:
 * Localização do Glossário Cloud Native da CNCF para ptBR: <https://glossary.cncf.io/pt-br/>
 * Programa Grafana Champion
 * Programa AWS Community Builder
+* Programa de pessoas embaixadoras da CNCF
