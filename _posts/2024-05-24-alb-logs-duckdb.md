@@ -74,8 +74,8 @@ WHERE elb_status_code >= 500
 
 Pontos de atenção aqui:
 * dependendo da quantidade de logs que tiver as consultas podem ficar muito lentas.
-* custos atrelados as consultas do Athena
-* vai executar tudo na console do Athena na AWS
+* custos atrelados as consultas do Athena.
+* vai executar tudo na console do Athena na AWS.
 
 ## DuckDB
 
@@ -93,6 +93,8 @@ Finalmente vamos pro que interessa, a configuração para conseguir fazer isso.
 ### Instalação e Autenticação na AWS
 
 Como já citei, a instalação é apenas fazer o download e usar um binário, [aqui](https://duckdb.org/docs/installation/index?version=stable&environment=cli&platform=linux&download_method=package_manager) na página de instalação você pode ver mais detalhes.
+
+Depois de instalado pode usar a CLI `duckdb`.
 
 Para autenticação, vamos configurar um [provider](https://duckdb.org/docs/extensions/httpfs/s3api#config-provider):
 
@@ -158,9 +160,24 @@ Com isso já podemos executar comandos normalmente:
 SELECT * FROM alb_logs WHERE elb_status_code == 500;
 ```
 
+Algumas outras coisas que valem citar:
+* O path do arquivo no bucket s3 suporta wildcards, então daria pra ter algo como `*.log.gz` e ler todos os arquivos de um diretório.
+* Da forma que estou fazendo tudo fica em memória, então vale ficar atento a quantidade de logs que quer buscar.
+* Se quiser gerar algo mais automatizado, pode criar um script `.sql` e executar com o *init*, assim: `duckdb -init read_alb_logs.sql`, dessa forma já vai abrir o shell com as informações prontas para serem consultadas.
+* o DuckDB suporta alguns comandos com ponto (`.`): 
+  * `.read`: ler um arquivo de script.
+  * `.output`: salvar a saída em um arquivo ao invés de stdout. 
+  * e muitos outros, pode ver [aqui](https://duckdb.org/docs/api/cli/overview#dot-commands).
+
+Essas notas foram escritas no final de uma sexta-feira então desculpem se deixei passar algo, o script completo [está aqui no gist](https://gist.github.com/edsoncelio/93ce840c923677a7563f3462fdda77ed).
 
 
+## Referências
 
+Alguns dos links que me ajudaram:
+* https://www.linkedin.com/pulse/analysing-aws-application-load-balancer-logs-duckdb-unleashing/
+* https://duckdb.org/docs/data/csv/overview
+* https://duckdb.org/docs/extensions/httpfs/s3api
 
 
 
