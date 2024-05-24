@@ -84,11 +84,79 @@ O DuckDB é um sistema de gerenciamento de banco de dados relacional que suporta
  
 Pro meu caso o diferencial foi, além da simplicidade (apenas um binário sem dependências) foi a funcionalidade de fazer consultas em SQL a partir de fontes como json, csv, parquet localmente e também de fontes remotas (como o s3!).
 
+**Obs.:** uma funcionalidade que quero experimentar em breve é usar as bibliotecas clientes (Python, Golang...).
+
 Para o cenário dos logs do ALB, vamos ler diretamente do s3, convertendo pra csv pra fazer consultas em SQL localmente!
 
 Finalmente vamos pro que interessa, a configuração para conseguir fazer isso.
 
-Primeiro vamos configurar a autenticação para conseguir buscar os arquivos no bucket s3
+### Instalação e Autenticação na AWS
+
+Como já citei, a instalação é apenas fazer o download e usar um binário, [aqui](https://duckdb.org/docs/installation/index?version=stable&environment=cli&platform=linux&download_method=package_manager) na página de instalação você pode ver mais detalhes.
+
+Para autenticação, vamos configurar um [provider](https://duckdb.org/docs/extensions/httpfs/s3api#config-provider):
+
+```
+CREATE SECRET s3credentials (
+    TYPE S3,
+    PROVIDER CREDENTIAL_CHAIN
+);
+```
+Também poderia ser feito passando diretamente as credenciais, mas não queremos fazer isso.
+
+Criado esse bloco de provider, já podemos acessar os buckets s3 que essas credenciais tem acesso, no formato:
+```
+s3://<path-no-bucket-s3>
+```
+
+### Lendo os arquivos de logs e fazendo o parse para SQL
+
+Já estando autenticado, podemos ler o arquivo ou diretório que queremos, converter pra CSV, salvar em uma tabela e dai sim começar a consultar as informações.
+
+Essa é a estrutura da tabela que vamos criar:
+```
+CREATE TABLE alb_logs AS SELECT * FROM 
+read_csv('s3://<path-no-bucket-s3>', delim=' ',
+types = {
+ 'type': 'VARCHAR',
+ 'time': 'TIMESTAMP',
+ 'elb': 'VARCHAR',
+ 'client:port': 'VARCHAR',
+ 'target:port': 'VARCHAR',
+ 'request_processing_time': 'FLOAT',
+ 'target_processing_time': 'FLOAT',
+ 'response_processing_time': 'FLOAT',
+ 'elb_status_code': 'INTEGER',
+ 'target_status_code': 'VARCHAR',
+ 'received_bytes': 'BIGINT',
+ 'sent_bytes': 'BIGINT',
+ 'request': 'VARCHAR',
+ 'user_agent': 'VARCHAR',
+ 'ssl_cipher': 'VARCHAR',
+ 'ssl_protocol': 'VARCHAR',
+ 'target_group_arn': 'VARCHAR',
+ 'trace_id': 'VARCHAR',
+ 'domain_name': 'VARCHAR',
+ 'chosen_cert_arn': 'VARCHAR',
+ 'matched_rule_priority': 'VARCHAR',
+ 'request_creation_time': 'TIMESTAMP',
+ 'actions_executed': 'VARCHAR',
+ 'redirect_url': 'VARCHAR',
+ 'error_reason': 'VARCHAR',
+ 'target_status_code_list': 'VARCHAR',
+ 'classification': 'VARCHAR',
+ 'classification_reason': 'VARCHAR'
+},
+names=['type', 'time','elb','client:port','target:port','request_processing_time','target_processing_time','response_processing_time','elb_status_code','target_status_code','received_bytes','sent_bytes','request','user_agent','ssl_cipher','ssl_protocol','target_group_arn','trace_id','domain_name','chosen_cert_arn','matched_rule_priority','request_creation_time','actions_executed','redirect_url','error_reason','target_status_code_list','classification','classification_reason'],
+auto_detect = true);
+```
+Onde usamos a função `read_csv` pra ler o arquivo .log.gz (isso mesmo, nem precisamos descompactar nem nada!) e fazer a conversão dos campos para uma tabela SQL.
+
+Com isso já podemos executar comandos normalmente:
+
+```
+SELECT * FROM alb_logs WHERE elb_status_code == 500;
+```
 
 
 
