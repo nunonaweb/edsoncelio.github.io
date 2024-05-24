@@ -1,7 +1,7 @@
 ---
 title: Analisando logs de acesso de ALBs (Application Load Balancer) localmente com DuckDB
 author: edson
-date: 2024-0-12
+date: 2024-05-24
 categories: [Utils]
 tags: [aws, logs, ptbr]
 ---
