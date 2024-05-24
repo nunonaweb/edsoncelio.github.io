@@ -7,7 +7,7 @@ tags: [aws, logs, ptbr]
 ---
 
 Só quem já precisou fazer alguma investigação que envolvia analisar os logs de acesso de ALBs (Application Load Balancer) da AWS sabe a dor e sofrimento que é.   
-Mas pra quem nunca precisou? Não tem problema! Vou explicar um pouco sobre como funciona até chegar na solução com uso do duckDB.
+Mas pra quem nunca precisou? Não tem problema! Vou explicar um pouco sobre como funciona até chegar na solução com uso do DuckDB.
 
 ---
 
@@ -59,9 +59,7 @@ Imaginando um caso onde precisa buscar uma requisição que retornou um código 
 
 Isso não é nem de longe a melhor (e mais rápida) forma de fazer troubleshooting, então vamos as propostas de solução pra agilizar isso.
 
-## Agilizando a consulta de informações nos logs
-
-### Com AWS Athena
+### AWS Athena
 Uma forma de fazer busca e consulta nesses arquivos de logs, é usando o AWS Athena, que pra quem não conhece é um serviço da AWS que permite que você faça consulta usando SQL em arquivos do s3.
 
 [Aqui](https://docs.aws.amazon.com/athena/latest/ug/application-load-balancer-logs.html) tem um guia detalhado de como fazer isso, mas em resumo o que vai precisar fazer:
@@ -74,12 +72,24 @@ SELECT * FROM alb_logs
 WHERE elb_status_code >= 500
 ```
 
-Um ponto de atenção aqui é: dependendo da quantidade de logs que tiver as consultas podem ficar muito lentas.
+Pontos de atenção aqui:
+* dependendo da quantidade de logs que tiver as consultas podem ficar muito lentas.
+* custos atrelados as consultas do Athena
+* vai executar tudo na console do Athena na AWS
 
-### Com duckDB
+## DuckDB
 
-A outra opção é usar o duckDB (que descobri recentemente graças a alguma thread aleatória no twitter).
-O 
+A outra opção é usar o [DuckDB](https://duckdb.org/why_duckdb) (que descobri recentemente graças a alguma thread aleatória no twitter).    
+O DuckDB é um sistema de gerenciamento de banco de dados relacional que suporta SQL, mas o que torna diferente de outras soluções?
+ 
+Pro meu caso o diferencial foi, além da simplicidade (apenas um binário sem dependências) foi a funcionalidade de fazer consultas em SQL a partir de fontes como json, csv, parquet localmente e também de fontes remotas (como o s3!).
+
+Para o cenário dos logs do ALB, vamos ler diretamente do s3, convertendo pra csv pra fazer consultas em SQL localmente!
+
+Finalmente vamos pro que interessa, a configuração para conseguir fazer isso.
+
+Primeiro vamos configurar a autenticação para conseguir buscar os arquivos no bucket s3
+
 
 
 
