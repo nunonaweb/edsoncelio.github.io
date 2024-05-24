@@ -1,5 +1,5 @@
 ---
-title: Analisando logs de acesso de ALBs (Application Load Balancer) localmente com DuckDB
+title: Analisando logs de acesso de load balancers da AWS com DuckDB
 author: edson
 date: 2024-05-24
 categories: [Utils]
