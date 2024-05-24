@@ -78,7 +78,8 @@ Um ponto de atenção aqui é: dependendo da quantidade de logs que tiver as con
 
 ### Com duckDB
 
-A outra opção é usar o duckDB (que descobri recentemente graças a alguma thread aleatória no twitter)
+A outra opção é usar o duckDB (que descobri recentemente graças a alguma thread aleatória no twitter).
+O 
 
 
 
