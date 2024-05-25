@@ -12,8 +12,6 @@ Mas pra quem nunca precisou? Não tem problema! Vou explicar um pouco sobre como
 ---
 
 ## O que são e como funcionam os logs de ALBs?
-Elastic Load Balancing provides access logs that capture detailed information about requests sent to your load balancer. Each log contains information such as the time the request was received, the client's IP address, latencies, request paths, and server responses. You can use these access logs to analyze traffic patterns and troubleshoot issues.
-
 É possível ter logs com as informações detalhadas das requisições que chegam no ALB, informações como:
 * hora da request
 * endereço IP do cliente
