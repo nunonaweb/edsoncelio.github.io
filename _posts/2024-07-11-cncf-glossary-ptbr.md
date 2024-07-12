@@ -1,7 +1,7 @@
 ---
 title: Contribuindo pro Glossário Cloud Native da CNCF em Português
 author: edson
-date: 2024-07-10
+date: 2024-07-11
 categories: [OpenSource]
 tags: [cncf, glossary, docs]
 ---
